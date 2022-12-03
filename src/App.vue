@@ -1,9 +1,14 @@
 <template>
-  <ul></ul>
+  <stored-ressources :ressources="storedRessources"></stored-ressources>
 </template>
 
 <script>
+import StoredRessources from "./components/learning-ressources/StoredRessources.vue";
+
 export default {
+  components: {
+    StoredRessources,
+  },
   data() {
     return {
       storedRessources: [
@@ -24,3 +29,19 @@ export default {
   },
 };
 </script>
+
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+</style>
